@@ -1,0 +1,20 @@
+[project]
+name = "application-wait-times"
+version = "0.1.0"
+description = "Bayesian models for application wait times"
+requires-python = ">=3.12"
+dependencies = [
+    "pymc>=5",
+    "arviz",
+    "pandas>=2",
+    "pyarrow",
+    "sqlalchemy>=2",
+    "psycopg2-binary>=2.9",
+    "sshtunnel>=0.4",
+    "paramiko<4",  # sshtunnel 0.4 uses paramiko.DSSKey, removed in paramiko 4
+    "python-dotenv>=1",
+    "matplotlib",
+]
+
+[dependency-groups]
+dev = ["ipykernel", "pytest"]  # ipykernel runs the # %% cells in VS Code
